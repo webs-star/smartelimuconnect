@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="google-site-verification" content="ZuK2pvozDS96vm0_IRjSYEsTqSdC8FJCIgJdAitGf0U" />
+  <title>ICT Integration in Schools Kenya | Smart Elimu Connect</title>
+  <meta name="description" content="Transform your school with Smart Elimu Connect ICT tools in Kenya. Experience Smart Register, Homework Smart System, Competency Tracker, Projects Portfolio, Parent Connect, AI Teaching Assistant, and Virtual STEMLa Club." />
+  <meta name="keywords" content="ICT integration in schools Kenya, Smart Elimu Connect, SmartLearn Kenya, digital learning Kenya, school management systems Kenya, Smart Register, digital homework system, Competency Tracker, CBC tools Kenya, AI teaching assistant Kenya, virtual learning club Kenya, school ICT tools Kenya, e-learning platforms Kenya, smart school system Kenya, Smart Elimu Connect app, ICT for Kenyan teachers, ICT training for schools Kenya, smart classrooms Kenya, eLearning for Kenyan schools, digital education Kenya, school ICT innovation Kenya, online learning Kenya, Kenyan education technology, Smart STEM tools Kenya, Smart Portfolio Kenya, Smart Parent Connect, digital CBC tracking Kenya, Smart Homework System Kenya, Smart ICT demo for schools, SmartElimuConnect Kenya" />
+  <meta name="author" content="Smart Elimu Connect Ltd" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ICT Integration in Schools Kenya | Smart Elimu Connect" />
+  <meta property="og:description" content="Empower your teachers and students with Smart ICT Tools — Smart Register, Homework System, Competency Tracker, and Virtual STEMLa Club by Smart Elimu Connect." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elimuconnect.github.io/ELIMU-CONNECT-/school" />
+  <meta property="og:site_name" content="Smart Elimu Connect" />
+  <meta property="og:image" content="https://static.wixstatic.com/media/9ba186_61b351de3531446995b426f1c49950ed~mv2.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #00796b;
+      --blue: #0d47a1;
+      --orange: #ff9800;
+      --gold: #ffb300;
+      --bg: linear-gradient(135deg, #f0f9ff, #fffaf5);
+      --text: #04302a;
+      --muted: #6b7280;
+      --card: #ffffff;
+      --radius: 20px;
+    }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body { margin:0; font-family:'Poppins', sans-serif; background:var(--bg); color:var(--text); }
+    .wrap { max-width:1200px; margin:auto; padding:20px; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:12px 5%; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1); border-radius:16px; margin-bottom:20px;}
+    .site-title { font-weight:700; font-size:22px; color:var(--blue); }
+    .site-sub { font-size:14px; color:var(--green); }
+    nav a { text-decoration:none; font-weight:600; margin-left:12px; color:var(--blue); }
+    .btn-primary { background:linear-gradient(90deg, var(--green), var(--blue)); color:#fff; padding:10px 16px; border-radius:12px; font-weight:700; text-decoration:none; display:inline-block; margin-top:8px; }
+    .btn-gold { background:linear-gradient(90deg, var(--gold), var(--orange)); color:#fff; padding:10px 16px; border-radius:12px; font-weight:700; text-decoration:none; display:inline-block; margin-top:8px; }
+    .hero { background:linear-gradient(120deg,#e0f7fa,#fff8e1); border-radius:24px; padding:30px; display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+    .hero h1 { font-size:28px; margin:0; }
+    .lead { color:var(--muted); margin-top:6px; font-size:15px; }
+    .big-card { background:var(--card); border-radius:var(--radius); box-shadow:0 12px 20px rgba(0,0,0,0.06); padding:20px; margin-top:20px; }
+    ul.features { margin-top:12px; color:#444; }
+    ul.features li { margin-bottom:6px; list-style-type:"💡 "; }
+    .price-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; margin-top:20px; }
+    .price-card { background:#fff; border-radius:16px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.05); text-align:center; transition:0.3s; }
+    .price-card:hover { transform:scale(1.05); }
+    footer { text-align:center; color:var(--muted); font-size:13px; padding:18px; margin-top:30px; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <img src="https://static.wixstatic.com/media/9ba186_61b351de3531446995b426f1c49950ed~mv2.png" 
+             alt="Smart Elimu Connect Logo" 
+             style="width:75px;height:75px;border-radius:50%;object-fit:cover;">
+        <div>
+          <div class="site-title">SMART ICT INTEGRATION FOR SCHOOLS</div>
+          <div class="site-sub">Transforming Teaching and Learning in Kenya</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#tools">ICT Tools</a>
+        <a href="#demo">Book a Demo</a>
+        <a class="btn-primary" href="https://wa.me/254769255782?text=Hello%20Smart%20Elimu%20Connect%2C%20I%20want%20an%20ICT%20Demo%20for%20my%20school.">Chat on WhatsApp</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Empower Your School with Smart ICT Tools</h1>
+        <p class="lead">Experience seamless ICT integration in Kenyan schools with Smart Elimu Connect — Smart Register, AI Teaching Assistant, Homework Smart System, Competency Tracker, Parent Connect & STEMLa Club.</p>
+        <a class="btn-gold" href="#demo">Book a Free Demo</a>
+        <a class="btn-primary" href="#tools">Explore ICT Tools</a>
+      </div>
+    </section>
+
+    <section id="tools">
+      <div class="big-card">
+        <h2>Our Smart ICT Tools for Schools</h2>
+        <p class="lead">Each tool is designed to make teaching, learning, and school management more effective, digital, and CBC-compliant.</p>
+
+        <ul class="features">
+          <li><strong>Smart Register</strong> – Track attendance, participation & class engagement digitally.</li>
+          <li><strong>Homework Smart System</strong> – Assign, mark, and analyze student homework automatically.</li>
+          <li><strong>Competency Tracker</strong> – Monitor CBC skills, performance, and learner portfolios.</li>
+          <li><strong>Projects & CBL Portfolio</strong> – Manage Competency-Based Learning evidence easily.</li>
+          <li><strong>Parent Connect</strong> – Engage parents with real-time learner updates and progress reports.</li>
+          <li><strong>AI Teaching Assistant</strong> – Support teachers with instant lesson ideas, quizzes, and feedback.</li>
+          <li><strong>Smart STEMLa Club (Virtual)</strong> – National virtual science, coding & robotics club for learners.</li>
+          <li><strong>Custom School Website</strong> – Branded website with student portal & communication tools.</li>
+          <li><strong>Smart Bus Tracking</strong> – Ensure safe, monitored school transport for all learners.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="demo">
+      <div class="big-card">
+        <h2>Book a Free Demo for Your School</h2>
+        <p class="lead">Our experts will guide your staff through how Smart Elimu Connect can transform your school through ICT integration.</p>
+
+        <div class="price-grid">
+          <div class="price-card" style="border:2px solid #1976d2;">
+            <h3>📅 Book a Demo</h3>
+            <p>See all Smart ICT tools live in action.</p>
+            <a class="btn-primary" href="https://wa.me/254769255782?text=I%20want%20to%20book%20a%20Smart%20ICT%20Demo%20for%20our%20school.">Book Now on WhatsApp</a>
+          </div>
+
+          <div class="price-card" style="border:2px solid #ffb300;">
+            <h3>💰 View Pricing</h3>
+            <p>Get customized subscription packages for your school.</p>
+            <a class="btn-gold" href="https://wa.me/254769255782?text=Send%20me%20Smart%20ICT%20pricing%20for%20schools.">Request Pricing</a>
+          </div>
+        </div>
+
+        <p style="margin-top:16px;font-weight:600;color:#0d47a1;">🎉 Special Offer: The first 10 schools to sign up get 3 months FREE access to Smart ICT Tools!</p>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 SMART ELIMU CONNECT • WhatsApp: <a href="https://wa.me/254769255782">+254 769 255 782</a>
+    </footer>
+  </div>
+</body>
+</html>
