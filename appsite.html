@@ -78,7 +78,10 @@
     --radius: 20px;
   }
 
-  * { box-sizing: border-box; scroll-behavior: smooth; }
+  * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
 
   body {
     margin: 0;
@@ -94,7 +97,7 @@
   }
 
   /* HEADER */
-  header {
+  header.main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -105,13 +108,13 @@
     box-shadow: 0 5px 12px rgba(0,0,0,0.15);
     margin: 20px auto;
     max-width: 1200px;
+    position: relative;
   }
 
-  header .header-left {
+  .header-left {
     display: flex;
     align-items: center;
     gap: 18px;
-    flex-wrap: nowrap;
   }
 
   .logo-circle {
@@ -150,22 +153,24 @@
     margin-top: 4px;
   }
 
-  nav {
+  nav.header-nav {
     display: flex;
     align-items: center;
     gap: 18px;
-    flex-wrap: nowrap;
     font-size: 16px;
+    transition: all 0.3s ease;
   }
 
-  nav a {
+  nav.header-nav a {
     text-decoration: none;
     font-weight: 600;
     color: #0d47a1;
     transition: color 0.3s;
   }
 
-  nav a:hover { color: var(--teal); }
+  nav.header-nav a:hover {
+    color: var(--teal);
+  }
 
   .btn-primary {
     background: linear-gradient(90deg, #0d47a1, #1976d2);
@@ -178,85 +183,100 @@
     transition: 0.3s;
   }
 
-  .btn-primary:hover { transform: scale(1.05); }
-
-  /* THREE DOTS */
-  .dots {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  .btn-primary:hover {
+    transform: scale(1.05);
   }
 
-  .dot {
-    width: 10px;
-    height: 10px;
-    background-color: #1976d2;
-    border-radius: 50%;
-    animation: pulse 1.5s infinite;
+  /* MENU DOTS (MOBILE) */
+  .menu-dots {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
   }
 
-  .dot:nth-child(2) { animation-delay: 0.3s; }
-  .dot:nth-child(3) { animation-delay: 0.6s; }
-
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.6; }
-    50% { transform: scale(1.5); opacity: 1; }
+  .menu-dots span {
+    display: block;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #0d47a1;
   }
 
-  /* RESPONSIVE DESIGN */
+  /* Responsive */
   @media (max-width: 900px) {
-    header {
-      flex-direction: column;
-      text-align: center;
+    header.main-header {
+      flex-wrap: wrap;
+      padding: 20px;
       border-radius: 40px;
-      padding: 25px;
     }
 
-    header .header-left {
-      flex-direction: column;
-      align-items: center;
+    .menu-dots {
+      display: flex;
+      position: absolute;
+      right: 25px;
+      top: 25px;
     }
 
-    nav {
+    nav.header-nav {
+      display: none;
       flex-direction: column;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 15px;
       width: 100%;
+      background: #f9f9ff;
+      border-radius: 20px;
+      padding: 15px 0;
+      margin-top: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
-    nav a { font-size: 15px; }
-
-    .dots {
-      justify-content: center;
-      gap: 8px;
-      margin: 5px 0;
+    nav.header-nav.show {
+      display: flex;
+      animation: fadeIn 0.3s ease;
     }
 
-    .dot { width: 12px; height: 12px; }
+    nav.header-nav a {
+      font-size: 16px;
+      padding: 10px 0;
+    }
 
     .btn-primary {
       padding: 10px 24px;
       border-radius: 25px;
     }
 
-    .site-title { font-size: 20px; }
-    .site-sub { font-size: 14px; }
-    .lead { font-size: 12px; }
-  }
+    .site-title {
+      font-size: 20px;
+    }
 
-  @media (max-width: 500px) {
-    header { margin: 10px; padding: 20px; }
-    .site-title { font-size: 18px; }
-    nav a { font-size: 14px; }
-    .btn-primary { font-size: 14px; padding: 8px 18px; }
+    .site-sub {
+      font-size: 14px;
+    }
+
+    .lead {
+      font-size: 12px;
+    }
+
+    .logo-circle {
+      width: 80px;
+      height: 80px;
+    }
+
+    .logo-circle img {
+      width: 60px;
+      height: 60px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   }
 </style>
-</head>
 
 <body>
   <div class="wrap">
-    <!-- HEADER -->
     <header class="main-header">
       <div class="header-left">
         <div class="logo-circle">
@@ -269,21 +289,23 @@
         </div>
       </div>
 
-      <nav class="header-nav">
+      <!-- Menu Dots -->
+      <div class="menu-dots" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Nav -->
+      <nav class="header-nav" id="mobileNav">
         <a href="#kenya">Elimu Connect (Kenya)</a>
-        <div class="dots">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
         <a href="#global">SmartLearn (Global)</a>
         <a href="https://wa.me/254769255782?text=Hello%20SmartElimuConnect%2C%20I'm%20interested%20in%20Elimu%20Connect%20App." class="btn-primary">Chat Now</a>
       </nav>
     </header>
   </div>
-</body>
 
-
+  
 
     <!-- HERO: Kenya -->
     <section class="hero" id="kenya">
@@ -368,5 +390,13 @@
       <a href="https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre">SmartLearn (Global)</a>
     </footer>
   </div>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileNav').classList.toggle('show');
+    }
+  </script>
+
 </body>
 </html>
