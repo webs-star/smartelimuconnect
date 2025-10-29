@@ -20,7 +20,7 @@
   <meta property="og:image" content="https://static.wixstatic.com/media/9ba186_61b351de3531446995b426f1c49950ed~mv2.png" />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
- <style>
+<style>
   :root {
     --green: #00796b;
     --blue: #0d47a1;
@@ -33,11 +33,7 @@
     --radius: 20px;
   }
 
-  * {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-
+  * { box-sizing: border-box; scroll-behavior: smooth; }
   body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -45,11 +41,7 @@
     color: var(--text);
   }
 
-  .wrap {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-  }
+  .wrap { max-width: 1200px; margin: auto; padding: 20px; }
 
   /* HEADER */
   header {
@@ -61,14 +53,13 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border-radius: 24px;
     margin-bottom: 25px;
-    flex-wrap: nowrap;
+    position: relative;
   }
 
   .left {
     display: flex;
     align-items: center;
     gap: 14px;
-    flex-wrap: nowrap;
   }
 
   .logo-circle {
@@ -105,8 +96,8 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    flex-wrap: nowrap;
     font-size: 17px;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
   }
 
   nav a {
@@ -116,9 +107,7 @@
     transition: color 0.3s;
   }
 
-  nav a:hover {
-    color: var(--green);
-  }
+  nav a:hover { color: var(--green); }
 
   .btn-primary {
     background: linear-gradient(90deg, var(--green), var(--blue));
@@ -131,9 +120,7 @@
     transition: transform 0.3s;
   }
 
-  .btn-primary:hover {
-    transform: scale(1.05);
-  }
+  .btn-primary:hover { transform: scale(1.05); }
 
   .btn-gold {
     background: linear-gradient(90deg, var(--gold), var(--orange));
@@ -146,9 +133,7 @@
     transition: transform 0.3s;
   }
 
-  .btn-gold:hover {
-    transform: scale(1.05);
-  }
+  .btn-gold:hover { transform: scale(1.05); }
 
   /* HERO SECTION */
   .hero {
@@ -161,161 +146,60 @@
     flex-wrap: wrap;
   }
 
-  .hero h1 {
-    font-size: 30px;
-    margin: 0;
-  }
+  .hero h1 { font-size: 30px; margin: 0; }
+  .lead { color: var(--muted); margin-top: 6px; font-size: 16px; }
 
-  .lead {
-    color: var(--muted);
-    margin-top: 6px;
-    font-size: 16px;
-  }
-
-  .big-card {
-    background: var(--card);
-    border-radius: var(--radius);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.06);
-    padding: 25px;
-    margin-top: 25px;
-  }
-
-  ul.features {
-    margin-top: 12px;
-    color: #444;
-    padding-left: 15px;
-  }
-
-  ul.features li {
-    margin-bottom: 8px;
-    list-style-type: "💡 ";
-    font-size: 15px;
-  }
-
-  .price-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
-    margin-top: 25px;
-  }
-
-  .price-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  .price-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-  }
-
-  footer {
-    text-align: center;
-    color: var(--muted);
-    font-size: 13px;
-    padding: 18px;
-    margin-top: 40px;
+  /* MOBILE MENU BUTTON */
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--blue);
+    user-select: none;
   }
 
   /* RESPONSIVE DESIGN */
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     header {
-      flex-direction: column;
-      text-align: center;
-      border-radius: 20px;
-      padding: 20px;
-    }
-
-    nav {
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 15px;
-    }
-
-    .site-title {
-      font-size: 22px;
-    }
-
-    .site-sub {
-      font-size: 14px;
-    }
-
-    .logo-circle {
-      width: 75px;
-      height: 75px;
-    }
-
-    .logo-circle img {
-      width: 60px;
-      height: 60px;
-    }
-
-    .hero {
-      flex-direction: column;
-      text-align: center;
-      padding: 25px;
-    }
-
-    .hero h1 {
-      font-size: 24px;
-    }
-
-    .lead {
-      font-size: 14px;
-    }
-  }
-
-  @media (max-width: 500px) {
-    header {
-      margin: 10px;
+      flex-direction: row;
+      justify-content: space-between;
       padding: 16px;
     }
 
     nav {
-      gap: 10px;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      border-radius: 12px;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 10;
     }
 
-    nav a {
-      font-size: 15px;
+    nav.show {
+      max-height: 400px;
+      opacity: 1;
+      padding: 15px 0;
     }
 
-    .btn-primary,
-    .btn-gold {
-      font-size: 14px;
-      padding: 8px 18px;
-    }
-
-    .site-title {
-      font-size: 20px;
-    }
-
-    .site-sub {
-      font-size: 13px;
-    }
-
-    .lead {
-      font-size: 13px;
-    }
-
-    .hero h1 {
-      font-size: 22px;
+    .menu-toggle {
+      display: block;
     }
   }
 </style>
 
-</head>
-
 <body>
   <div class="wrap">
-
     <header>
-      <div style="display:flex;align-items:center;gap:12px;">
-        <img src="https://static.wixstatic.com/media/9ba186_61b351de3531446995b426f1c49950ed~mv2.png" 
-             alt="Smart Elimu Connect Logo" 
+      <div class="left">
+        <img src="https://static.wixstatic.com/media/9ba186_61b351de3531446995b426f1c49950ed~mv2.png"
+             alt="Smart Elimu Connect Logo"
              style="width:75px;height:75px;border-radius:50%;object-fit:cover;">
         <div>
           <div class="site-title">SMART ICT INTEGRATION FOR SCHOOLS</div>
@@ -323,22 +207,17 @@
         </div>
       </div>
 
-      <nav>
+      <!-- 3-dot menu icon for phones -->
+      <div class="menu-toggle" onclick="toggleMenu()">⋮</div>
+
+      <nav id="navMenu">
         <a href="#tools">ICT Tools</a>
         <a href="#demo">Book a Demo</a>
         <a class="btn-primary" href="https://wa.me/254769255782?text=Hello%20Smart%20Elimu%20Connect%2C%20I%20want%20an%20ICT%20Demo%20for%20my%20school.">Chat on WhatsApp</a>
-    <a
-    class="btn-login"
-    href="https://elimuconnect.github.io/ELIMU-CONNECT-/school"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Login to Smart Elimu Connect ICT integration"
-    style="text-decoration:none; margin-left:8px;"
-  >
-    Login
-  </a>
+        <a class="btn-login" href="https://elimuconnect.github.io/ELIMU-CONNECT-/school" target="_blank" rel="noopener noreferrer">Login</a>
       </nav>
     </header>
+
 
     <section class="hero">
       <div>
@@ -391,6 +270,13 @@
       </div>
     </section>
 
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navMenu").classList.toggle("show");
+    }
+  </script>
+  
     <footer>
       © 2025 SMART ELIMU CONNECT • WhatsApp: <a href="https://wa.me/254769255782">+254 769 255 782</a>
     </footer>
