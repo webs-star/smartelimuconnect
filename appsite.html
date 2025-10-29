@@ -283,26 +283,31 @@
       font-size: 13px;
     }
   }
-  
-  /* Mobile-specific styles: max-width 900px */
+ 
+/* Hide toggle button by default (desktop) */
+.menu-toggle {
+  display: none;       /* Hidden on PC */
+  font-size: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0d47a1;
+  margin-top: 10px;
+}
+
+/* Mobile-specific styles: max-width 900px */
 @media (max-width: 900px) {
-  /* Hide desktop nav by default */
+  /* Show toggle button only on mobile */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hide nav by default on mobile */
   nav.header-nav { 
     display: none; 
     flex-direction: column; 
     gap: 15px; 
     margin-top: 15px;
-  }
-  
-  /* Show toggle button (3 dots) */
-  .menu-toggle { 
-    display: block; 
-    font-size: 40px;      /* Bigger dots */
-    background: none; 
-    border: none; 
-    cursor: pointer; 
-    color: #0d47a1;
-    margin-top: 10px;
   }
 
   /* Adjust header layout for mobile */
