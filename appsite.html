@@ -1,126 +1,318 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>SMART ELIMU CONNECT APPS – Elimu Connect (Kenya) & SmartLearn (Global)</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --teal: #0b7b61;
-  --blue: #007bff;
-  --bg: linear-gradient(135deg,#f0f9ff,#fffaf5);
-  --text: #04302a;
-  --muted: #6b7280;
-  --card: #ffffff;
-  --radius: 20px;
-}
-* { box-sizing: border-box; scroll-behavior: smooth; }
-body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); }
-.wrap { max-width: 1200px; margin: auto; padding: 20px; }
+  <!-- Basic Meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SMART ELIMU CONNECT APPS – Elimu Connect (Kenya) & SmartLearn (Global)</title>
+  
+  <meta name="description" content="Smart Elimu Connect Apps offer free and affordable online tuition for CBC, KCSE, IGCSE, IB, CBSE & ICSE learners. Includes live A.I. tutors, 30,000+ past papers, simulations, eBooks, quizzes, and a 40% referral program." />
+  
+  <meta name="keywords" content="Smart Elimu Connect, Elimu Connect Kenya, SmartLearn Global, Smart Elimu, online tuition Kenya, AI tutor Kenya, CBC tuition, KCSE revision, IGCSE online learning, IB tutoring, CBSE classes, ICSE education app, Smart Elimu app, past papers Kenya, AI tutor app, science simulations, math tools" />
+  
+  <meta name="author" content="Smart Elimu Connect Ltd" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  background: radial-gradient(circle at top left, #e3f2fd, #ffffff);
-  border-radius: 60px;
-  padding: 25px 60px;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
-  margin: 30px auto;
-  max-width: 1200px;
-}
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  flex-wrap: nowrap;
-}
-.logo-circle {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #1976d2, #0d47a1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-}
-.logo-circle img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  border: 3px solid white;
-}
-.site-title { font-weight: 800; font-size: 26px; color: #0d47a1; letter-spacing: 0.5px; }
-.site-sub { font-size: 18px; color: #1976d2; font-weight: 600; }
-.lead { color: var(--muted); font-size: 15px; margin-top: 5px; }
-nav {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  font-size: 18px;
-  flex-wrap: nowrap;
-}
-nav a {
-  text-decoration: none;
-  font-weight: 700;
-  color: #0d47a1;
-  transition: color 0.3s;
-}
-nav a:hover { color: var(--teal); }
-.btn-primary {
-  background: linear-gradient(90deg, #0d47a1, #1976d2);
-  color: #fff;
-  padding: 12px 28px;
-  border-radius: 40px;
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-  transition: transform 0.3s;
-}
-.btn-primary:hover { transform: scale(1.05); }
+  <!-- Open Graph -->
+  <meta property="og:title" content="SMART ELIMU CONNECT APPS – Elimu Connect (Kenya) & SmartLearn (Global)" />
+  <meta property="og:description" content="Free & affordable AI-powered learning apps for Kenya & global learners. Includes live tutors, 30,000+ past papers, math & science simulations, quizzes, eBooks, and 40% referral rewards." />
+  <meta property="og:image" content="https://static.wixstatic.com/media/9ba186_61b351de3531446995b426f1c49950ed~mv2.png" />
+  <meta property="og:url" content="https://www.smartelimuconnect.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Smart Elimu Connect" />
 
-/* HERO + SECTIONS */
-.hero { background: linear-gradient(120deg,#e0f7fa,#fff8e1); border-radius: 24px; padding: 30px; display: flex; gap: 25px; align-items: center; flex-wrap: wrap; }
-.hero h1 { font-size: 26px; margin: 0; }
-.big-card { background: var(--card); border-radius: var(--radius); box-shadow: 0 12px 20px rgba(0,0,0,0.06); padding: 20px; margin-top: 25px; }
-footer { text-align: center; color: var(--muted); font-size: 13px; padding: 18px; margin-top: 30px; }
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SMART ELIMU CONNECT APPS – Elimu Connect (Kenya) & SmartLearn (Global)" />
+  <meta name="twitter:description" content="#1 Rated Learning App in Kenya & Abroad. Learn with AI tutors, access past papers, and enjoy interactive tools — free & affordable!" />
+  <meta name="twitter:image" content="https://static.wixstatic.com/media/9ba186_61b351de3531446995b426f1c49950ed~mv2.png" />
 
-/* SLIDER */
-.slider { position: relative; overflow: hidden; margin-top: 30px; }
-.slides { display: flex; animation: scroll 40s linear infinite; width: max-content; }
-.testimonial { min-width: 300px; background: #fff; border-radius: 16px; padding: 16px; margin: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-.testimonial strong { color: var(--blue); }
-@keyframes scroll { 0% {transform: translateX(0);} 100% {transform: translateX(-50%);} }
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.smartelimuconnect.com" />
 
-/* MOBILE MENU */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 32px;
-  cursor: pointer;
-  color: #0d47a1;
-}
-@media(max-width:900px) {
+  <!-- Favicon -->
+  <link rel="icon" href="https://static.wixstatic.com/media/9ba186_61b351de3531446995b426f1c49950ed~mv2.png" type="image/png" />
+
+  <!-- App Store Links for SEO -->
+  <meta name="apple-itunes-app" content="app-id=elimuconnect.tuitioncentre" />
+  <meta name="google-play-app" content="app-id=elimuconnect.tuitioncentre" />
+
+  <!-- Schema Markup (Structured Data for SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Smart Elimu Connect Apps",
+    "alternateName": ["Elimu Connect", "SmartLearn"],
+    "url": "https://www.smartelimuconnect.com",
+    "logo": "https://static.wixstatic.com/media/9ba186_61b351de3531446995b426f1c49950ed~mv2.png",
+    "description": "Smart Elimu Connect Apps provide AI-powered online and physical tuition for CBC, KCSE, IGCSE, IB, CBSE, and ICSE students. Includes live tutors, past papers, eBooks, simulations, and a 40% referral program.",
+    "sameAs": [
+      "https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre",
+      "https://www.facebook.com/smartelimuconnect",
+      "https://twitter.com/smartelimuconnect"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "KE"
+    },
+    "brand": {
+      "@type": "Brand",
+      "name": "Smart Elimu Connect"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+ <style> 
+  :root {
+    --teal: #0b7b61;
+    --blue: #007bff;
+    --bg: linear-gradient(135deg,#f0f9ff,#fffaf5);
+    --text: #04302a;
+    --muted: #6b7280;
+    --card: #ffffff;
+    --radius: 20px;
+  }
+
+  * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  .wrap {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    background: radial-gradient(circle at top left, #e3f2fd, #ffffff);
+    border-radius: 60px;
+    padding: 25px 60px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+    margin: 30px auto;
+    max-width: 1200px;
+  }
+
+  header .left {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: nowrap;
+  }
+
+  .logo-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #1976d2, #0d47a1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  }
+
+  .logo-circle img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+
+  .site-title {
+    font-weight: 800;
+    font-size: 26px;
+    color: #0d47a1;
+    letter-spacing: 0.5px;
+  }
+
+  .site-sub {
+    font-size: 18px;
+    color: #1976d2;
+    font-weight: 600;
+  }
+
+  .lead {
+    color: var(--muted);
+    font-size: 15px;
+    margin-top: 5px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 18px;
+    flex-wrap: nowrap;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #0d47a1;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: var(--teal);
+  }
+
+  .btn-primary {
+    background: linear-gradient(90deg, #0d47a1, #1976d2);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    transition: transform 0.3s;
+  }
+
+  .btn-primary:hover {
+    transform: scale(1.05);
+  }
+
+  /* HERO + SECTIONS */
+  .hero {
+    background: linear-gradient(120deg,#e0f7fa,#fff8e1);
+    border-radius: 24px;
+    padding: 30px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+    margin: 0;
+  }
+
+  .big-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.06);
+    padding: 20px;
+    margin-top: 25px;
+  }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    padding: 18px;
+    margin-top: 30px;
+  }
+
+  /* SLIDER */
+  .slider {
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+
+  .slides {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    width: max-content;
+  }
+
+  .testimonial {
+    min-width: 300px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .testimonial strong {
+    color: var(--blue);
+  }
+
+  @keyframes scroll {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-50%);}
+  }
+
+  /* RESPONSIVE */
+  @media(max-width:900px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+      padding: 25px;
+      border-radius: 40px;
+    }
+
+    header .left {
+      flex-direction: column;
+    }
+
+    nav {
+      margin-top: 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .site-title {
+      font-size: 22px;
+    }
+
+    .site-sub {
+      font-size: 16px;
+    }
+
+    .lead {
+      font-size: 13px;
+    }
+  }
+  
+  
+  /* Mobile-specific styles: max-width 900px */
+@media (max-width: 900px) {
+  /* Hide desktop nav by default */
+  nav { display: none; flex-direction: column; gap: 15px; }
+  
+  /* Show toggle button (3 dots) */
+  .menu-toggle { display: block; }
+
+  /* Adjust header layout for mobile */
   header { flex-direction: column; text-align: center; padding: 25px; border-radius: 40px; }
   .header-left { flex-direction: column; }
-  nav { display: none; flex-direction: column; margin-top: 18px; gap: 15px; }
-  nav.show { display: flex; }
-  .menu-toggle { display: block; margin-top: 15px; }
   .site-title { font-size: 22px; }
   .site-sub { font-size: 16px; }
   .lead { font-size: 13px; }
 }
-</style>
-</head>
-<body>
-<div class="wrap">
 
-<!-- HEADER -->
+  
+  nav.show { display: flex; }
+
+</style>
+
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- HEADER -->
+    
+  <!-- HEADER -->
 <header class="main-header">
   <div class="header-left">
     <div class="logo-circle">
@@ -132,38 +324,109 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 18px
       <div class="lead">For CBC, KCSE, IGCSE, IB, CBSE, ICSE, JET, SAT exams • Free & Affordable Tuition</div>
     </div>
   </div>
+  
+<button class="menu-toggle" onclick="toggleMenu()">⋮</button>
 
-  <button class="menu-toggle" onclick="toggleMenu()">⋮</button>
 
-  <nav class="header-nav" id="mainNav">
+
+  <nav class="header-nav">
     <a href="#kenya">Elimu Connect (Kenya)</a>
     <a href="#global">SmartLearn (Global)</a>
     <a href="https://wa.me/254769255782?text=Hello%20SmartElimuConnect%2C%20I'm%20interested%20in%20Elimu%20Connect%20App." class="btn-primary">Chat Now</a>
   </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="kenya">
-  <div>
-    <h1>🇰🇪 Elimu Connect: CBC • KCSE • IGCSE</h1>
-    <p class="lead">Free & affordable online and physical tuition. Learn CBC & KCSE subjects from verified Kenyan tutors.</p>
+
+    <!-- HERO: Kenya -->
+    <section class="hero" id="kenya">
+      <div>
+        <h1>🇰🇪 Elimu Connect: CBC • KCSE • IGCSE</h1>
+        <p class="lead">Free & affordable online and physical tuition. Learn CBC & KCSE subjects from verified Kenyan tutors.</p>
+        
+      </div>
+    </section>
+
+    <!-- WHY STUDENTS LOVE IT -->
+    <section class="hero" id="why-love-it" style="display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;padding:40px 10px;">
+      <div class="big-card" style="flex:1;min-width:300px;max-width:480px;background:#f9fbff;border:2px solid #90caf9;border-radius:16px;padding:25px;box-shadow:0 5px 15px rgba(25,118,210,0.15);">
+        <h3 style="color:#0d47a1;margin-bottom:10px;">💙 Why Kenya Students Love It</h3>
+        <ul style="font-size:14px;line-height:1.8;list-style:none;padding:0;">
+          <li>🧠 Free AI Live Tutor for Instant Help</li>
+          <li>📄 30,000+ Past Papers & 5000+ Quizzes</li>
+          <li>📘 250+ eBooks for All Subjects</li>
+          <li>🎥 2000+ Interactive Video Lessons</li>
+          <li>🔬 Interactive Math & Science Tools</li>
+          <li>💰 Plans Just for Ksh 500/month</li>
+        </ul>
+      </div>
+
+      <div style="flex:1;min-width:280px;max-width:480px;text-align:left;">
+        <h1 style="color:#0d47a1;">📱 Learn Smarter, Anytime!</h1>
+        <p style="font-size:16px;color:#333;line-height:1.6;">Smart Elimu Connect helps Kenyan students study efficiently through AI-powered learning tools, live tutoring, and exam-focused materials — all in one app.</p>
+        <a class="btn-primary" href="https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre" target="_blank" style="margin-top:10px;">Install App (Kenya)</a>
+     <a class="btn-outline" href="https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre" target="_blank">Free Trial (7 Days)</a>
+	 </div>
+    </section>
+
+    <!-- GLOBAL SECTION -->
+    <section class="hero" id="global" style="flex-direction:row-reverse;padding:40px 10px;">
+      <div class="big-card" style="flex:1;min-width:300px;max-width:480px;background:#fffdf7;border:2px solid #ffd54f;border-radius:16px;padding:25px;box-shadow:0 5px 15px rgba(255,193,7,0.25);">
+        <h3 style="color:#ff8f00;margin-bottom:10px;">🌍 Why Global Students Love It</h3>
+        <ul style="font-size:14px;line-height:1.8;list-style:none;padding:0;">
+          <li>🌐 Live AI Lessons in 30+ Countries</li>
+          <li>🤖 Smart Tutor for Homework Help</li>
+          <li>📚 Prep for IGCSE, IB, CBSE, ICSE, SAT</li>
+          <li>🔬 5000+ Quizzes & 30,000+ Past Papers</li>
+          <li>💬 Real-Time Reports & Tracking</li>
+          <li>💰 Plans Just for $8/month</li>
+        </ul>
+      </div>
+
+      <div style="flex:1;min-width:280px;max-width:480px;text-align:left;">
+        <h1 style="color:#ff8f00;">🌎 SmartLearn: IGCSE • IB • CBSE • ICSE</h1>
+        <p style="font-size:16px;color:#333;line-height:1.6;">For global students seeking personalized tutoring, AI help, and smart simulations — anytime, anywhere.</p>
+       	   <a class="btn-primary" href="https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre" target="_blank" style="margin-top:10px;">Install App (Global)</a>
+      <a class="btn-outline" href="https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre" target="_blank">Free Trial (7 Days)</a>
+	  </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="big-card" id="testimonials">
+      <h2 style="text-align:center; color:#0b7b61;">🌟 What Students Say — Rated 5★</h2>
+      <div class="slider">
+        <div class="slides">
+          <div class="testimonial"><strong>Gift:</strong> “The best app I've used so far — amazing!”</div>
+          <div class="testimonial"><strong>Symore:</strong> “Best learning app ever. I give it 5 stars!”</div>
+          <div class="testimonial"><strong>Jackline:</strong> “Perfect for my kid — super helpful.”</div>
+          <div class="testimonial"><strong>Destiny:</strong> “Helped me with assignments. #BestAppInKenya”</div>
+          <div class="testimonial"><strong>David:</strong> “All the info you need as a student.”</div>
+          <div class="testimonial"><strong>Leonard:</strong> “Very helpful for my kids 😊.”</div>
+          <div class="testimonial"><strong>Trizah:</strong> “Perfect! Highly recommended.”</div>
+          <div class="testimonial"><strong>Ernest:</strong> “Very informative and easy to use.”</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERRAL -->
+    <section class="big-card" id="referral">
+      <h2>💰 Referral Program</h2>
+      <p class="lead">Earn <strong>40% commission</strong> for every paid subscription you refer. Share the app with friends and start earning today!</p>
+      <a class="btn-primary" href="https://wa.me/254769255782?text=I%20want%20to%20join%20the%20Elimu%20Connect%20referral%20program.">Join Referral Program</a>
+    </section>
+
+    <footer>
+      © 2025 SMART ELIMU CONNECT • WhatsApp: <a href="https://wa.me/254769255782">+254 769 255 782</a><br>
+      Apps: <a href="https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre">Elimu Connect (Kenya)</a> |
+      <a href="https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre">SmartLearn (Global)</a>
+    </footer>
   </div>
-</section>
-
-<!-- ... keep the rest of your sections the same ... -->
-
-<footer>
-© 2025 SMART ELIMU CONNECT • WhatsApp: <a href="https://wa.me/254769255782">+254 769 255 782</a><br>
-Apps: <a href="https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre">Elimu Connect (Kenya)</a> | 
-<a href="https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre">SmartLearn (Global)</a>
-</footer>
-</div>
-
-<script>
-function toggleMenu() {
+  
+  <script>
+  
+  function toggleMenu() {
   document.getElementById('mainNav').classList.toggle('show');
 }
 </script>
-
+  
 </body>
 </html>
