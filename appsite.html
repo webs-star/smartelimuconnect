@@ -78,10 +78,7 @@
     --radius: 20px;
   }
 
-  * {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
+  * { box-sizing: border-box; scroll-behavior: smooth; }
 
   body {
     margin: 0;
@@ -110,7 +107,7 @@
     max-width: 1200px;
   }
 
-  header .left {
+  header .header-left {
     display: flex;
     align-items: center;
     gap: 18px;
@@ -168,9 +165,7 @@
     transition: color 0.3s;
   }
 
-  nav a:hover {
-    color: var(--teal);
-  }
+  nav a:hover { color: var(--teal); }
 
   .btn-primary {
     background: linear-gradient(90deg, #0d47a1, #1976d2);
@@ -183,71 +178,29 @@
     transition: 0.3s;
   }
 
-  .btn-primary:hover {
-    transform: scale(1.05);
-  }
+  .btn-primary:hover { transform: scale(1.05); }
 
-  /* HERO + SECTIONS */
-  .hero {
-    background: linear-gradient(120deg, #e0f7fa, #fff8e1);
-    border-radius: 24px;
-    padding: 25px;
+  /* THREE DOTS */
+  .dots {
     display: flex;
-    gap: 20px;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 6px;
   }
 
-  .hero h1 {
-    font-size: 26px;
-    margin: 0;
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #1976d2;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
   }
 
-  .big-card {
-    background: var(--card);
-    border-radius: var(--radius);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.06);
-    padding: 20px;
-    margin-top: 25px;
-  }
+  .dot:nth-child(2) { animation-delay: 0.3s; }
+  .dot:nth-child(3) { animation-delay: 0.6s; }
 
-  footer {
-    text-align: center;
-    color: var(--muted);
-    font-size: 13px;
-    padding: 18px;
-    margin-top: 30px;
-  }
-
-  /* SLIDER */
-  .slider {
-    position: relative;
-    overflow: hidden;
-    margin-top: 30px;
-  }
-
-  .slides {
-    display: flex;
-    animation: scroll 40s linear infinite;
-    width: max-content;
-  }
-
-  .testimonial {
-    min-width: 300px;
-    background: #fff;
-    border-radius: 16px;
-    padding: 16px;
-    margin: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  .testimonial strong {
-    color: var(--blue);
-  }
-
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.5); opacity: 1; }
   }
 
   /* RESPONSIVE DESIGN */
@@ -259,7 +212,7 @@
       padding: 25px;
     }
 
-    header .left {
+    header .header-left {
       flex-direction: column;
       align-items: center;
     }
@@ -272,88 +225,64 @@
       width: 100%;
     }
 
-    nav a {
-      font-size: 15px;
+    nav a { font-size: 15px; }
+
+    .dots {
+      justify-content: center;
+      gap: 8px;
+      margin: 5px 0;
     }
+
+    .dot { width: 12px; height: 12px; }
 
     .btn-primary {
       padding: 10px 24px;
       border-radius: 25px;
     }
 
-    .site-title {
-      font-size: 20px;
-    }
-
-    .site-sub {
-      font-size: 14px;
-    }
-
-    .lead {
-      font-size: 12px;
-    }
-
-    .logo-circle {
-      width: 85px;
-      height: 85px;
-    }
-
-    .logo-circle img {
-      width: 65px;
-      height: 65px;
-    }
+    .site-title { font-size: 20px; }
+    .site-sub { font-size: 14px; }
+    .lead { font-size: 12px; }
   }
 
   @media (max-width: 500px) {
-    header {
-      margin: 10px;
-      padding: 20px;
-    }
-
-    .site-title {
-      font-size: 18px;
-    }
-
-    nav {
-      gap: 12px;
-    }
-
-    nav a {
-      font-size: 14px;
-    }
-
-    .btn-primary {
-      font-size: 14px;
-      padding: 8px 18px;
-    }
+    header { margin: 10px; padding: 20px; }
+    .site-title { font-size: 18px; }
+    nav a { font-size: 14px; }
+    .btn-primary { font-size: 14px; padding: 8px 18px; }
   }
 </style>
-
 </head>
 
 <body>
   <div class="wrap">
     <!-- HEADER -->
-    
-  <!-- HEADER -->
-<header class="main-header">
-  <div class="header-left">
-    <div class="logo-circle">
-      <img src="https://static.wixstatic.com/media/9ba186_61b351de3531446995b426f1c49950ed~mv2.png" alt="Smart Elimu Connect Logo">
-    </div>
-    <div>
-      <div class="site-title">SMART ELIMU CONNECT APPS</div>
-      <div class="site-sub">#1 Learning App in Kenya & Abroad (Rated ★★★★★)</div>
-      <div class="lead">For CBC, KCSE, IGCSE, IB, CBSE, ICSE, JET, SAT exams • Free & Affordable Tuition</div>
-    </div>
-  </div>
+    <header class="main-header">
+      <div class="header-left">
+        <div class="logo-circle">
+          <img src="https://static.wixstatic.com/media/9ba186_61b351de3531446995b426f1c49950ed~mv2.png" alt="Smart Elimu Connect Logo">
+        </div>
+        <div>
+          <div class="site-title">SMART ELIMU CONNECT APPS</div>
+          <div class="site-sub">#1 Learning App in Kenya & Abroad (Rated ★★★★★)</div>
+          <div class="lead">For CBC, KCSE, IGCSE, IB, CBSE, ICSE, JET, SAT exams • Free & Affordable Tuition</div>
+        </div>
+      </div>
 
-  <nav class="header-nav">
-    <a href="#kenya">Elimu Connect (Kenya)</a>
-    <a href="#global">SmartLearn (Global)</a>
-    <a href="https://wa.me/254769255782?text=Hello%20SmartElimuConnect%2C%20I'm%20interested%20in%20Elimu%20Connect%20App." class="btn-primary">Chat Now</a>
-  </nav>
-</header>
+      <nav class="header-nav">
+        <a href="#kenya">Elimu Connect (Kenya)</a>
+        <div class="dots">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <a href="#global">SmartLearn (Global)</a>
+        <a href="https://wa.me/254769255782?text=Hello%20SmartElimuConnect%2C%20I'm%20interested%20in%20Elimu%20Connect%20App." class="btn-primary">Chat Now</a>
+      </nav>
+    </header>
+  </div>
+</body>
+
 
 
     <!-- HERO: Kenya -->
