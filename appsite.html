@@ -284,35 +284,46 @@
     }
   }
   
-  
- @media (max-width: 900px) {
-  .menu-toggle {
-    display: block;
+  /* Mobile-specific styles: max-width 900px */
+@media (max-width: 900px) {
+  /* Hide desktop nav by default */
+  nav.header-nav { 
+    display: none; 
+    flex-direction: column; 
+    gap: 15px; 
+    margin-top: 15px;
   }
-}
-
   
- .menu-toggle {
-  display: none; /* hide on desktop */
-  background: none;
-  border: none;
-  font-size: 40px; /* make it bigger */
-  cursor: pointer;
-  color: #0d47a1;
-  margin-top: 10px;
-}
-
+  /* Show toggle button (3 dots) */
+  .menu-toggle { 
+    display: block; 
+    font-size: 40px;      /* Bigger dots */
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    color: #0d47a1;
+    margin-top: 10px;
+  }
 
   /* Adjust header layout for mobile */
-  header { flex-direction: column; text-align: center; padding: 25px; border-radius: 40px; }
-  .header-left { flex-direction: column; }
+  header.main-header { 
+    flex-direction: column; 
+    text-align: center; 
+    padding: 25px; 
+    border-radius: 40px; 
+  }
+  .header-left { 
+    flex-direction: column; 
+  }
   .site-title { font-size: 22px; }
   .site-sub { font-size: 16px; }
   .lead { font-size: 13px; }
 }
 
-  
-  nav.show { display: flex; }
+/* Show nav when menu is toggled */
+nav.header-nav.show { 
+  display: flex; 
+}
 
 </style>
 
@@ -322,8 +333,7 @@
   <div class="wrap">
     <!-- HEADER -->
     
-  <!-- HEADER -->
-<header class="main-header">
+ <header class="main-header">
   <div class="header-left">
     <div class="logo-circle">
       <img src="https://static.wixstatic.com/media/9ba186_61b351de3531446995b426f1c49950ed~mv2.png" alt="Smart Elimu Connect Logo">
@@ -334,17 +344,16 @@
       <div class="lead">For CBC, KCSE, IGCSE, IB, CBSE, ICSE, JET, SAT exams • Free & Affordable Tuition</div>
     </div>
   </div>
-  
-<button class="menu-toggle" onclick="toggleMenu()">⋮</button>
 
+  <button class="menu-toggle" onclick="toggleMenu()">⋮</button>
 
-
-  <nav class="header-nav">
+  <nav class="header-nav" id="mainNav">
     <a href="#kenya">Elimu Connect (Kenya)</a>
     <a href="#global">SmartLearn (Global)</a>
     <a href="https://wa.me/254769255782?text=Hello%20SmartElimuConnect%2C%20I'm%20interested%20in%20Elimu%20Connect%20App." class="btn-primary">Chat Now</a>
   </nav>
 </header>
+
 
 
     <!-- HERO: Kenya -->
@@ -374,7 +383,7 @@
         <h1 style="color:#0d47a1;">📱 Learn Smarter, Anytime!</h1>
         <p style="font-size:16px;color:#333;line-height:1.6;">Smart Elimu Connect helps Kenyan students study efficiently through AI-powered learning tools, live tutoring, and exam-focused materials — all in one app.</p>
         <a class="btn-primary" href="https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre" target="_blank" style="margin-top:10px;">Install App (Kenya)</a>
-     <a class="btn-outline" href="https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre" target="_blank">Free Trial </a>
+     <a class="btn-outline" href="https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre" target="_blank">Free Trial (7 Days)</a>
 	 </div>
     </section>
 
@@ -396,7 +405,7 @@
         <h1 style="color:#ff8f00;">🌎 SmartLearn: IGCSE • IB • CBSE • ICSE</h1>
         <p style="font-size:16px;color:#333;line-height:1.6;">For global students seeking personalized tutoring, AI help, and smart simulations — anytime, anywhere.</p>
        	   <a class="btn-primary" href="https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre" target="_blank" style="margin-top:10px;">Install App (Global)</a>
-      <a class="btn-outline" href="https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre" target="_blank">Free Trial </a>
+      <a class="btn-outline" href="https://play.google.com/store/apps/details?id=elimuconnect.tuitioncentre" target="_blank">Free Trial (7 Days)</a>
 	  </div>
     </section>
 
@@ -434,7 +443,7 @@
   <script>
   
   function toggleMenu() {
-  document.getElementById('header-nav').classList.toggle('show');
+  document.getElementById('mainNav').classList.toggle('show');
 }
 </script>
   
